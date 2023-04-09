@@ -13,7 +13,6 @@ class AddTodo extends React.Component {
         this.setState({item:thisItem}); 
         console.log(thisItem); 
     }
-    
     onButtonClick =()=>{ 
         this.add(this.state.item); 
         this.setState({item:{title:""}});// text 값을 추가하고 입력 필드는 초기화시킨다. 
@@ -25,30 +24,30 @@ class AddTodo extends React.Component {
     } 
     render(){ 
         return (
-            <Paper style={{margine:16, padding:16}}>
-                <Grid container>
-                    <Grid xs={11} md={11} item style={{paddingRight:16}}>
-                        <TextField 
-                        placehoder="Add Todo here" 
-                        fullWidth 
-                        onChange={this.onInputChange}
-                        value={this.state.item.title}
-                        onKeyPress={this.enterKeyEventHandler}
-                        />
-                    </Grid>
-                    <Grid  Grid xs={1} md={1} item>
-                    <Button 
+        <Paper style={{margine:16, padding:16}}>
+            <Grid container>
+                <Grid xs={11} md={11} item style={{paddingRight:16}}>
+                    <TextField 
+                    placehoder="Add Todo here" 
                     fullWidth 
-                    color="secondary" 
-                    variant="outlined"
-                    onClick={this.onButtonClick}
-                    >
-                        +
+                    onChange={this.onInputChange}
+                    value={this.state.item.title}
+                    onKeyPress={this.enterKeyEventHandler}
+                    />
+                </Grid>
+                <Grid xs={1} md={1} item>
+                <Button 
+                fullWidth 
+                color="secondary" 
+                variant="outlined"
+                onClick={this.onButtonClick}
+                >
+                    +
                     </Button>
-                 </Grid> 
+                </Grid> 
             </Grid>
         </Paper>
-        ); 
+    ); 
     }
 }
 
