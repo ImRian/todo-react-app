@@ -6,8 +6,7 @@ import DeleteOutlined from "@material-ui/icons/DeleteOutlined";
 class Todo extends React.Component { 
     constructor(props){ 
         super(props); 
-        this.state ={ item: props.item, readOnly:true }; // 매개변수 item 의 변수/값을 item에 대
-입
+        this.state ={ item: props.item, readOnly:true }; // 매개변수 item 의 변수/값을 item에 대입
         this.delete = props.delete; 
     }
  
